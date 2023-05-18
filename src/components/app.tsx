@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 function App() {
-  return <div className=" bg-red-300">Hello World</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
