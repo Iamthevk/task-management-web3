@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Sidebar() {
   return (
-    <div className="w-64 pl-3 bg-primaryDark-500 h-screen border-r-2 border-[#242731]">
+    <div className="w-64 pl-3 bg-primaryDark-500 h-screen border-r-2 border-secondary-200 ">
       <div className="pt-12 gap-1 flex justify-start items-center pb-8">
         {" "}
         <span className="p-3 py-1 ml-3 text-white font-bold bg-primary-500 rounded-full       mr-2 text-lg">
