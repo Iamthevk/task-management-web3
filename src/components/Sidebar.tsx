@@ -1,10 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-// interface SidebarProps {
-//   setOpenSidebar: (open: boolean) => void;
-// }
-
 const Sidebar: React.FC = () => {
   const [openSidebar, setOpenSidebar] = useState(true);
 
@@ -27,45 +23,53 @@ const Sidebar: React.FC = () => {
             />
           </div>
           <ul className="ml-3">
-            <li className="flex gap-5 mb-5">
+            <li className="flex gap-5 mb-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg">
               <Image src="/home.png" alt="home" width={20} height={17} />
-              <p className="text-sm space-x-2 text-primary-200">Home</p>
+              <p className="text-sm space-x-2 text-primary-200 hover:text-white ">
+                Home
+              </p>
             </li>
-            <li className="flex gap-5 mb-5">
+            <li className="flex gap-5 mb-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg">
               <Image
                 src="/section-1.png"
                 alt="section-one"
                 width={20}
                 height={17}
               />
-              <p className="text-sm space-x-2 text-primary-200">Section 1</p>
+              <p className="text-sm space-x-2 text-primary-200 hover:text-white ">
+                Section 1
+              </p>
             </li>
-            <li className="flex gap-5 mb-5">
+            <li className="flex gap-5 mb-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg">
               <Image
                 src="/section-2.svg"
                 alt="section-two"
                 width={17}
                 height={17}
               />
-              <p className="text-sm space-x-2 text-primary-200">Section 2</p>
+              <p className="text-sm space-x-2 text-primary-200 hover:text-white ">
+                Section 2
+              </p>
             </li>
-            <li className="flex gap-5 mb-5">
+            <li className="flex gap-5 mb-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg">
               <Image
                 src="/share.svg"
                 alt="section-eight"
                 width={17}
                 height={17}
               />
-              <p className="text-sm space-x-2 text-primary-200">Section 8</p>
+              <p className="text-sm space-x-2 text-primary-200 hover:text-white ">
+                Section 8
+              </p>
             </li>
-            <li className="flex gap-5">
+            <li className="flex gap-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg hover:text-white ">
               <Image
                 src="/share.svg"
                 alt="section-eight"
                 width={17}
                 height={17}
               />
-              <p className="text-sm space-x-2 text-primary-200">Section 8</p>
+              <p className="text-sm space-x-2 text-primary-200 ">Section 8</p>
             </li>
           </ul>
         </div>

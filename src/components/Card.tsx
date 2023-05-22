@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import EditTodoSidebar from "./EditTodoSidebar";
 
 interface Todo {
   todo: string;
@@ -12,6 +13,8 @@ const Card = () => {
   const [newDescription, setNewDescription] = useState("");
   const [isEditMode, setIsEditMode] = useState(false);
   const [editIndex, setEditIndex] = useState<number | null>(null);
+  const [showEditBar, setShowEditBar] = useState(false);
+  const [selectedTodo, setSelectedTodo] = useState<Todo | null>(null);
 
   const handleAddTodo = (e: any) => {
     e.preventDefault();
@@ -33,6 +36,7 @@ const Card = () => {
       setTodos([...todos, todo]);
       setNewTodo("");
       setNewDescription("");
+      setSelectedTodo(todo);
     }
   };
   const handleEditTodo = (index: number) => {
@@ -41,7 +45,19 @@ const Card = () => {
     setNewDescription(todo.description);
     setIsEditMode(true);
     setEditIndex(index);
+    setSelectedTodo(todo);
   };
+  const handleSave = (newTodo: string, newDescription: string) => {
+    // Update the todo in your main component's state or perform any necessary actions
+    // using the newTodo and newDescription values
+    // ...
+    // Close the edit sidebar
+    setShowEditBar(false);
+  };
+  const handleBack = () => {
+    setShowEditBar(false);
+  };
+
   return (
     <>
       <div className="bg-primaryDark-200 w-72 p-2 rounded-lg mt-2">
@@ -74,7 +90,7 @@ const Card = () => {
             className=" w-7 bg-primaryDark-100 text-xl absolute font-extrabold right-2 top-1 text-white ml-2 rounded-full"
             onClick={handleAddTodo}
           >
-            {isEditMode ? "-" : "+"}
+            +
           </button>
         </form>
       </div>
@@ -82,8 +98,9 @@ const Card = () => {
         {todos.map((todo, index) => (
           <div
             key={index}
-            className="bg-primaryDark-200 w-72 p-2 rounded-lg mt-2 relative"
+            className="bg-primaryDark-200 w-72 p-2 rounded-lg mt-2 relative "
           >
+            <div className="absolute inset-y-2 left-0 bg-border-500 w-1"></div>
             <div className="flex ">
               <Image
                 src="/bag.png"
@@ -100,6 +117,7 @@ const Card = () => {
               className="w-7 bg-primaryDark-100 text-xl absolute font-extrabold right-5 top-2 text-white ml-2 rounded-full"
               onClick={() => {
                 handleEditTodo(index);
+                setShowEditBar(true);
               }}
             >
               <Image src={"/edit.png"} width={28} height={24} alt="edit" />
@@ -122,6 +140,15 @@ const Card = () => {
           // </div>
         ))}
       </div>
+      {showEditBar && (
+        <EditTodoSidebar
+          todo={selectedTodo}
+          newTodo={newTodo}
+          onBack={handleBack}
+          onSave={handleSave}
+          onNewTodoChange={setNewTodo}
+        />
+      )}
     </>
   );
 };

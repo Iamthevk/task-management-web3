@@ -12,7 +12,7 @@ function Layout() {
         <div className="  mt-3">
           <div className="ml-4 text-white">
             <h1 className="bg-primaryDark-300 w-[286px] p-3 rounded-xl">
-              List: Things to Buy
+              List : Things to Buy
             </h1>
             <Card />
           </div>
