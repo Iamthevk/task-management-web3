@@ -5,10 +5,10 @@ import Navbar from "./Navbar";
 
 function Layout() {
   return (
-    <>
-      <Navbar />
-      <div className="flex">
-        <Sidebar />
+    <div className="flex">
+      <Sidebar />
+      <div className="w-full">
+        <Navbar />
         <div className="  mt-3">
           <div className="ml-4 text-white">
             <h1 className="bg-primaryDark-300 w-[286px] p-3 rounded-xl">
@@ -18,7 +18,7 @@ function Layout() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

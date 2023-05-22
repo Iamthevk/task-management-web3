@@ -11,7 +11,7 @@ const Sidebar: React.FC = () => {
   return (
     <>
       {openSidebar && (
-        <div className="pl-3 bg-primaryDark-500 h-screen border-r-2 border-secondary-200 w-[20%]">
+        <div className="pl-3 bg-primaryDark-500 h-screen border-r-2 border-secondary-200 md:w-[300px]">
           <div className="pt-12 gap-1 flex justify-start items-center pb-8">
             <span className="p-3 py-1 ml-3 text-white font-bold bg-primary-500 rounded-full mr-2 text-lg">
               N

@@ -98,7 +98,9 @@ const Card = () => {
             {/* <div className=" w-7 bg-primaryDark-100 text-xl  font-extrabold right-2 top-1 text-white rounded-full"> */}
             <button
               className="w-7 bg-primaryDark-100 text-xl absolute font-extrabold right-5 top-2 text-white ml-2 rounded-full"
-              onClick={() => handleEditTodo(index)}
+              onClick={() => {
+                handleEditTodo(index);
+              }}
             >
               <Image src={"/edit.png"} width={28} height={24} alt="edit" />
             </button>

@@ -4,11 +4,10 @@ import Image from "next/image";
 function Navbar() {
   return (
     <>
-      <div className="flex justify-center items-center bg-primary-500 text-white h-9 ">
-        <p>Lorem Ipsum is simply dummy text of the printing</p>
-      </div>
       <div className="h-14 border-b-4 border-secondary-200 flex justify-between items-center pl-10">
-        <p className="text-lg text-white ">Section</p>
+        <p className="text-lg text-white hover:border-b-4 hover: border-primary-500 cursor-pointer">
+          Section
+        </p>
         <div className="text-white mr-4">
           <div className="flex bg-primaryDark-200 w-[200px] items-center rounded-lg gap-3">
             <Image
