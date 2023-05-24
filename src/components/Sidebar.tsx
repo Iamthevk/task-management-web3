@@ -62,14 +62,16 @@ const Sidebar: React.FC = () => {
                 Section 8
               </p>
             </li>
-            <li className="flex gap-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg hover:text-white ">
+            <li className="flex gap-5 hover:bg-primaryDark-100 hover:py-2 hover:px-0.5 hover:rounded-lg">
               <Image
                 src="/share.svg"
                 alt="section-eight"
                 width={17}
                 height={17}
               />
-              <p className="text-sm space-x-2 text-primary-200 ">Section 8</p>
+              <p className="text-sm space-x-2 text-primary-200 hover:text-white">
+                Section 8
+              </p>
             </li>
           </ul>
         </div>

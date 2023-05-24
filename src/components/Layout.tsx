@@ -9,11 +9,21 @@ function Layout() {
       <Sidebar />
       <div className="w-full">
         <Navbar />
-        <div className="  mt-3">
+        <div className="grid grid-flow-col gap-7 place-items-baseline w-[286px]">
           <div className="ml-4 text-white">
-            <h1 className="bg-primaryDark-300 w-[286px] p-3 rounded-xl">
+            <h1 className="bg-primaryDark-300  p-3 rounded-xl">
               List : Things to Buy
             </h1>
+            <Card />
+          </div>
+
+          <div className="text-white">
+            <h1 className="bg-primaryDark-300 p-3 rounded-xl">
+              List : Empty List
+            </h1>
+            <Card />
+          </div>
+          <div className="text-white">
             <Card />
           </div>
         </div>
