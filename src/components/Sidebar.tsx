@@ -76,7 +76,7 @@ const Sidebar: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="text-white mb-[72px]">
+          <div className="text-white mb-[72px] -ml-4">
             <div className="flex justify-center gap-2 items-center mb-5">
               <div className="w-24 h-9 bg-primaryDark-100 py-1 rounded-lg">
                 <span className="ml-3 p-2 py-1 text-white font-bold bg-primary-500 rounded-full mr-2 text-xs  ">
@@ -89,7 +89,7 @@ const Sidebar: React.FC = () => {
                 Buy XYZ
               </p>
             </div>
-            <div className="flex justify-start gap-3 ml-10 items-center  ">
+            <div className="flex justify-start gap-3 ml-12  items-center  ">
               <Image
                 src="/globe.svg"
                 alt="globe"
