@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 interface EditTodoSidebarProps {
-  todo: Todo | null;
+  todo: any | null;
   newTodo: string;
   onSave: (newTodo: string, newDescription: string) => void;
   onBack: () => void;
@@ -26,7 +26,7 @@ const EditTodoSidebar: React.FC<EditTodoSidebarProps> = ({
   };
 
   return (
-    <div className="pl-3 bg-primaryDark-500 h-screen border-r-2 border-secondary-200 md:w-[300px] absolute right-0 top-[95px] border-l-2">
+    <div className="pl-3 bg-primaryDark-500 h-screen border-r-2 border-secondary-200 md:w-[300px] absolute right-0 top-[95px] border-l-2 z-10">
       <div className="inline-flex ml-2 gap-3 justify-start mt-3">
         <button onClick={onBack}>←</button>
         <h2>Edit Todo</h2>
