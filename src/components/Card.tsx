@@ -18,7 +18,6 @@ const Card = () => {
 
   const handleAddTodo = (e: any) => {
     e.preventDefault();
-    console.log("clciked");
     if (newTodo.trim() === "" || newDescription.trim() === "") {
       return;
     }
@@ -48,10 +47,6 @@ const Card = () => {
     setSelectedTodo(todo);
   };
   const handleSave = (newTodo: string, newDescription: string) => {
-    // Update the todo in your main component's state or perform any necessary actions
-    // using the newTodo and newDescription values
-    // ...
-    // Close the edit sidebar
     setShowEditBar(false);
   };
   const handleBack = () => {
@@ -122,22 +117,7 @@ const Card = () => {
             >
               <Image src={"/edit.png"} width={28} height={24} alt="edit" />
             </button>
-            {/* <button onClick={() => handleDeleteTodo(index)}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-red-500 hover:text-red-700 cursor-pointer"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 1a9 9 0 100 18A9 9 0 0010 1zm5 9a1 1 0 01-2 0v-1h-1v2h2v1h-2v2h-1v-2H8v-1h2V9H9V8h2V6h1v2h2v1h-2v1h1v1zM5 9a1 1 0 112 0v1H6v-2h1V7H5v1h1v1H5v1zm5-7a7 7 0 100 14A7 7 0 0010 2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button> */}
           </div>
-          // </div>
         ))}
       </div>
       {showEditBar && (
