@@ -13,7 +13,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const connectWallet = async () => {
     try {
-      const { ethereum } = window;
+      const { ethereum } = window as Window & { ethereum?: any };
       if (!ethereum) {
         console.log("Metamask not detected");
         return;
@@ -49,7 +49,7 @@ function App() {
       taskText: String,
     };
     try {
-      const { ethereum } = window;
+      const { ethereum } = window as Window & { ethereum?: any };
       if (ethereum) {
         await ethereum.enable();
         const provider = new ethers.BrowserProvider(ethereum);
@@ -87,7 +87,7 @@ function App() {
     <>
       {isUserLoggedIn ? (
         <>
-          <Banner handleConnect={connectWallet} isConnected={connected} />
+          <Banner />
           <Layout />
         </>
       ) : (
